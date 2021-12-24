@@ -1,26 +1,50 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export type ValueType = number
+
+const Counter = () => {
+
+    let [value, setValue] = useState<ValueType>(0)
+
+    const Incrementing = () => {
+        setValue(value += 1)
+    }
+
+    const Resetting = () => {
+        setValue(0)
+    }
+
+    return (
+            <div className="counter-wrapper">
+                <Disp value={value}/>
+                <div className={'interface'}>
+                    <Btn disabled={value === 5} className={'incr'} btnName={'incr'} callBack={Incrementing}/>
+                    <Btn disabled={value === 0} className={'reset'} btnName={'res'} callBack={Resetting}/>
+                </div>
+            </div>
+    );
 }
 
-export default App;
+
+type DispPropsType = {
+    value: ValueType
+}
+
+const Disp: React.FC<DispPropsType> = ({value}) => {
+    return <div className={value === 5 ? 'counter-value-maxi' : 'counter-value'}>{value}</div>
+}
+
+
+type BtnPropsType = {
+    className: string
+    btnName: string
+    callBack: () => void
+    disabled?: boolean
+}
+
+const Btn: React.FC<BtnPropsType> = ({className, btnName, callBack, disabled}) => {
+    return <button disabled={disabled} onClick={callBack} className={className}>{btnName}</button>
+}
+
+export default Counter;
