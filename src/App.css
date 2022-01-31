@@ -1,41 +1,47 @@
-
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
 
 .settings-wrapper {
   border: 5px solid #1cd9d3;
   border-radius: 3%;
-  max-width: 400px;
-  margin: 0 auto;
+  width: 400px;
   height: 310px;
+  margin-right: 20px;
 }
 
 .counter-wrapper {
   border: 5px solid #1cd9d3;
   border-radius: 3%;
-  max-width: 400px;
-  margin: 0 auto;
+  width: 400px;
   height: 310px;
+  margin-left: 20px;
 }
 
 .counter-value {
+  padding-top: 20px;
   max-width: 360px;
+  height: 110px;
   margin: 0 auto;
   background-color: #1cd9d3;
   margin-top: 20px;
   border-radius: 3%;
   text-align: center;
-  line-height: 130px;
   font-size: 55px;
   font-weight: 850;
+  line-height: 47px;
 }
 
 .counter-value-maxi {
   max-width: 360px;
+  height: 130px;
   margin: 0 auto;
   background-color: #1cd9d3;
   margin-top: 20px;
   border-radius: 3%;
   text-align: center;
-  line-height: 130px;
+  line-height: 60px;
   font-size: 55px;
   font-weight: 850;
   color: red;
@@ -52,6 +58,47 @@
   line-height: 110px;
 }
 
+.settings {
+  border: 5px solid #1cd9d3;
+  border-radius: 3%;
+  max-width: 350px;
+  margin: 0 auto;
+  margin-top: 20px;
+  height: 120px;
+}
+
+.settings input {
+  width: 75px;
+  height: 30px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.max-value {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+
+.max-value div {
+  font-size: 25px;
+  font-weight: bold;}
+
+.min-value {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 25px;
+}
+
+.min-value div {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.min-value input {
+  margin-left: 3px;
+}
 
 .interface button {
   width: 120px;
@@ -63,6 +110,34 @@
   border: 1px solid #1cd9d3;
   border-radius: 3%;
 }
+
+.max-value-input {
+  border: 3px solid red;
+  background-color: #ff7b6a;
+  border-radius: 3%;
+}
+
+.min-value-input {
+  border: 3px solid red;
+  background-color: #ff7b6a;
+  border-radius: 3%;
+}
+
+
+
+/*.counter-value-maxi {*/
+/*  max-width: 360px;*/
+/*  height: 130px;*/
+/*  margin: 0 auto;*/
+/*  background-color: #1cd9d3;*/
+/*  margin-top: 20px;*/
+/*  border-radius: 3%;*/
+/*  text-align: center;*/
+/*  line-height: 60px;*/
+/*  font-size: 55px;*/
+/*  font-weight: 850;*/
+/*  color: red;*/
+/*}*/
 
 
 
